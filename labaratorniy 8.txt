@@ -1,0 +1,99 @@
+#labaratorniy 8
+
+#8.1
+# a = {'10.0.0.1', '10.0.0.2', '10.0.0.2', '192.168.1.10'}
+# print(a)
+
+
+#8.2
+# a = {'admin', 'root', 'test'}
+# a.add('hacker')
+# a.remove('test')
+# print(a)
+
+
+#8.3
+# a = {21, 22, 23, 25}
+# port = int(input())
+# if port in a:
+#     print("port zapreshon")
+# else:
+#     print("port razreshon")
+
+
+#8.4
+# known = {"mal.com", "bad.net"}
+# new = {"bad.net", "xevil.org"}
+#
+# result = new - known
+# print(result)
+
+
+#8.5
+# a = {"alice", "bob", "root"}
+# b = {"root", "admin"}
+# conflict = a & b
+# print(conflict)
+
+
+
+#8.6
+# a = {"CVE-1", "CVE-2"}
+# b = {"CVE-2", "CVE-3"}
+# c = a | b
+# print(c)
+
+
+
+#8.7
+# a = {"read", "write", "delete"}
+# b = {"read", "download"}
+# difference = a ^ b
+# print(difference)
+
+
+#8.8
+# a = {"123", "qwerty", "test", "123", "qwerty", "admin"}
+# b = {"test"}
+# result = a - b
+# print(result)
+
+
+#8.9
+# global_ips = {"10.0.0.1", "10.0.0.2", "192.168.1.1"}
+# local_ips = {"10.0.0.2", "10.0.0.3"}
+# result = global_ips & local_ips
+# print(result)
+
+
+#8.10
+# logs = ["scan", "debug_mode", "scan", "connect", "debug_info"]
+# filtered = set()
+# for i in logs:
+#     if "debug" not in i:
+#         filtered.add(i)
+# print(filtered)
+
+#voprosi
+
+# 1. Какие свойства множеств отличают их от списков?
+# Множества неупорядоченные (нет индексов).
+# Все элементы уникальные (дубликаты автоматически удаляются).
+# Элементы изменяемы только если сами хэшируемые (например, числа, строки, кортежи).
+# 
+# 2. Нельзя. Причина: списки и словари нехэшируемые, а множество хранит элементы через хэш (для быстрого поиска и проверки уникальности).
+# 
+# 3. remove(x) — удаляет элемент x, но если элемента нет, вызывает ошибку KeyError.
+# discard(x) — удаляет элемент x, но если элемента нет, ошибки нет.
+# 
+# 4. A.union(B) и A | B делают одно и то же — возвращают объединение множеств.
+# Разница только в синтаксисе; иногда union() удобнее вызывать с несколькими аргументами (A.union(B, C, D)).
+# 
+# 5.Это симметричная разность: элементы, которые есть только в одном из множеств, но не в обоих одновременно.
+# Эквивалентно A.symmetric_difference(B).
+# 
+# 6. Метод изменяет множество на месте, оставляя только элементы, которые есть и в другом множестве (пересечение)
+# 
+# 7. Модифицируют множество на месте: add(), remove(), discard(), pop(), clear(), update(), intersection_update(), difference_update(), symmetric_difference_update().
+# Возвращают новое множество, не изменяя исходное:
+# union(), intersection(), difference(), symmetric_difference()
